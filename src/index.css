@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(39, 39, 39);
+    display: grid;
+    place-items: center;
+}
+.box{
+    width: 94vw;
+    height: 90vh;
+    background: aliceblue;
+    display: flex;
+    flex-direction: row;    
+}
+span:hover{
+opacity: 0.7;
+}
+span:active{
+opacity: 0.3;
+}
+
+.signin-box{
+    width: 94vw;
+    height: 90vh;
+    background: rgb(44, 44, 56);
+    display: grid;
+place-items: center;
+}
+.signin-button{
+    padding: 7px;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(141, 141, 141);
+}
+.signin-button:hover{
+    padding: 7px;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    border: 1px solid rgb(141, 141, 141);
+}
+.signin-button:active{
+    padding: 7px;
+    color: white;
+    opacity: 0.4;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(141, 141, 141);
+}
+a{
+    text-decoration: none;
+}
