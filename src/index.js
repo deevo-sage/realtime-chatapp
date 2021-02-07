@@ -16,7 +16,7 @@ const App = () => {
           <button
             className="signin-button"
             onClick={() => {
-              auth.signInWithPopup(googleauthprovider);
+            auth.signInWithRedirect(googleauthprovider);
             }}
           >
             Signin with google
