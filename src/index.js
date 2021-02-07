@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { render } from "react-dom";
 import { Router } from "@reach/router";
 import Sidebar from "./components/sidebar/sidebar";
 import Chat from "./components/chat/chat";
 import { auth, googleauthprovider } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
 require("./index.css");
 const App = () => {
   const [user] = useAuthState(auth);
