@@ -1,0 +1,376 @@
+.sidebar {
+  flex: 0.35;
+  background-color: rgb(44, 44, 56);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 300px;
+  border-right: 1px solid rgb(70, 70, 70);
+}
+.sidebar-header {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(58, 58, 73);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.avatar {
+  height: 35px;
+  width: 35px;
+  background: white;
+  border-radius: 50%;
+  margin: 5px;
+}
+.sidebar-search {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: rgb(56, 56, 56);
+  margin: 4px;
+  margin-top: 6px;
+
+  padding: 4px;
+  border-radius: 50px;
+}
+.sidebar-search > .avatar {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+.sidebar-search > input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  appearance: none;flex:0.9;
+}
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+.sidebar-chats {
+  width: 100%;
+  flex: 1;
+}
+
+.sidebar-chats > h3 {
+  color: rgb(218, 218, 218);
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.sidebar-chats > .chats {
+  margin-top: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.chatbutton {
+  width: 100%;
+  background-color: rgb(35, 36, 53);
+  border-bottom: 2px solid black;
+  height: 50px;
+  display: flex;
+}
+.chatbutton:first-of-type {
+  margin-top: 10px;
+}
+.chatbutton-text > .chat-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(219, 219, 219);
+}
+.chatbutton-text{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.chatbutton-text > .lastmsg {
+  font-size: 10px;
+  color: gray;
+}
+
+
+.header-svgs{
+    display: flex;
+}
+.svg-search{
+    margin:5px ;
+}
+.svg-dots{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.svg-msg{
+  width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.svg-dots:hover{
+opacity: 0.7;
+}
+.svg-msg:hover{
+opacity: 0.7;
+
+}
+.svg-dots:active{
+opacity: 0.3;
+}
+.svg-msg:active{
+opacity: 0.3;
+
+}
+
+
+.make-room{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 5px;
+}
+.make-room>input{
+      display: flex; 
+    flex-direction: row;
+    align-items: center;
+  width: 100%;
+  background-color: rgb(58, 58, 73);
+height: 30px;
+margin: 10px;
+padding: 6px;
+color: white;
+padding-left: 10px;
+border-radius: 15px;
+}
+.signin-box{
+    width: 94vw;
+    height: 90vh;
+    background: rgb(44, 44, 56);
+    display: grid;
+place-items: center;
+}
+.make-room-button{
+    padding: 7px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(141, 141, 141);
+}
+.make-room-button:hover{
+    background-color: rgb(54, 54, 54);
+}
+.make-room-button:active{
+    opacity: 0.4;
+    background-color: rgb(39, 39, 39);
+}
+.chat {
+  width: 100%;
+  background-color: rgb(44, 44, 56);
+  height: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.chat-header {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(58, 58, 73);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chat-header > div > p {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(219, 219, 219);
+}
+.chat-header > div {
+  display: flex;
+  align-items: center;
+}
+
+.chat-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(58, 58, 73);
+  height: 60px;
+}
+.chat-input {
+  font-size: 25px;
+}
+.msg-form {
+  width: 100%;
+  display: flex;
+}
+.msg-input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  appearance: none;
+  font-size: 16px;
+  flex: 1;
+}
+.msg-button {
+  background-color: transparent;
+  border: none;
+}
+.chat-msgs {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.msg-cont {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+.message {
+  width: fit-content;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 70%;
+  border-radius: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: white;
+  display: block;
+  padding-bottom: 5px;
+}
+.message>.text {
+  margin-right: 44px;
+}
+.sent {
+  justify-content: flex-end;
+}
+.recieved {
+  justify-content: flex-start;
+}
+
+.msg-sent {
+  background-color: rgb(22, 90, 65);
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-width: 50px;
+
+}
+.msg-recieved {
+  background-color: rgb(65, 62, 62);
+  text-align: left;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 50px;
+}
+.msg-sent > p {
+  text-align: right;
+}
+
+.msg-recieved > p {
+  text-align: left;
+}
+.message > .name {
+  position: absolute;
+  font-size: 13px;
+  color: rgb(151, 151, 151);
+}
+.message > .createdAt {
+  position: absolute;
+  font-size: 11px;
+  color: rgb(151, 151, 151);
+}
+.msg-sent > .name {
+  transform: translateY(-28px) translateX(5px);
+  text-align: right;
+}
+.msg-recieved > .name {
+  transform: translateY(-25px) translateX(-5px);
+  text-align: right;
+}
+.msg-sent > .createdAt {
+  transform: translateY(5px) translateX(5px);
+  text-align: right;
+}
+.msg-recieved > .createdAt {
+  transform: translateY(12px) translateX(5px);
+  text-align: right;
+  align-self: flex-end;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(39, 39, 39);
+    display: grid;
+    place-items: center;
+}
+.box{
+    width: 94vw;
+    height: 90vh;
+    background: aliceblue;
+    display: flex;
+    flex-direction: row;    
+}
+span:hover{
+opacity: 0.7;
+}
+span:active{
+opacity: 0.3;
+}
+
+.signin-box{
+    width: 94vw;
+    height: 90vh;
+    background: rgb(44, 44, 56);
+    display: grid;
+place-items: center;
+}
+.signin-button{
+    padding: 7px;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(141, 141, 141);
+}
+.signin-button:hover{
+    padding: 7px;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    border: 1px solid rgb(141, 141, 141);
+}
+.signin-button:active{
+    padding: 7px;
+    color: white;
+    opacity: 0.4;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(141, 141, 141);
+}
+a{
+    text-decoration: none;
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */

@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 import { Router } from "@reach/router";
 import Sidebar from "./components/sidebar/sidebar";
 import Chat from "./components/chat/chat";
 import { auth, googleauthprovider } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-require("./index.css");
+import "./index.css";
+import { useEffect } from "react";
 const App = () => {
-  const [user] = useAuthState(auth);
+  const [user, setuser] = useState(auth.currentUser);
 
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setuser(user);
+    });
+  });
   return (
     <div className="main">
       {!user && (
@@ -16,7 +22,7 @@ const App = () => {
           <button
             className="signin-button"
             onClick={() => {
-            auth.signInWithRedirect(googleauthprovider);
+              auth.signInWithPopup(googleauthprovider);
             }}
           >
             Signin with google
@@ -28,7 +34,7 @@ const App = () => {
           <Sidebar uid={user.uid} />
 
           <Router style={{ flex: 1 }}>
-            <Chat path="/rooms/:roomID" />
+            <Chat path="/rooms/:roomID" user={user} />
           </Router>
         </div>
       )}

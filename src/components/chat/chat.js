@@ -10,7 +10,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 require("./chat.css");
 const Chat = (props) => {
-  const [user] = useAuthState(auth);
+  const { user } = props;
   const [text, settext] = useState("");
   const seed = props.roomID;
   const Chatname = "Chat name";
@@ -28,7 +28,7 @@ const Chat = (props) => {
       uid: user.uid,
     });
     settext("");
-    setTimeout(200)
+    setTimeout(200);
   };
   return (
     <div className="chat">
@@ -97,14 +97,13 @@ const Chat = (props) => {
     </div>
   );
 };
-const Message = ({ message, id, previd,createdAt }) => {
-  const [createdAt2,setcreatedAt]=useState(null)
+const Message = ({ message, id, previd, createdAt }) => {
+  const [createdAt2, setcreatedAt] = useState(null);
   const { text, uid, name } = message;
   useEffect(() => {
-setcreatedAt(message.createdAt)
-  },[]);
-  if(createdAt)
-  {
+    setcreatedAt(message.createdAt);
+  }, []);
+  if (createdAt) {
     const date_ob = new Date(createdAt.toDate());
     var hours = ("0" + date_ob.getHours()).slice(-2);
     var minutes = ("0" + date_ob.getMinutes()).slice(-2);
